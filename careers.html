@@ -1,4 +1,70 @@
 <!DOCTYPE html><html lang="en"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "requests@domain.com",
+      "telephone": "+44 131 6494336",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "One Canada Square, Canary Wharf, Floor 16, Office 1206, E14 5AB London"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "requests@domain.com",
+        "telephone": "+44 131 6494336"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/careers.html#webpage",
+      "url": "https://domain.com/careers.html",
+      "name": "Careers | domain — Join Our Team",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "en",
+      "description": "Explore career opportunities at domain luxury lingerie. Join a passionate team shaping elegant fashion experiences. Apply today."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/careers.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Careers.Html",
+          "item": "https://domain.com/careers.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers | domain — Join Our Team</title>
@@ -12,32 +78,38 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header c-header navbar navbar-expand-md sticky-top" role="banner">
-   <div class="container">
-    <a class="navbar-brand c-logo" href="/" aria-label="Velourá — Home"> <span class="c-logo__wordmark">Velourá</span> </a>
-    <button class="navbar-toggler c-nav__toggle" type="button" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation"><span class="c-nav__toggle-icon"> 
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-       <rect x="3" y="5" width="18" height="2" rx="1" fill="currentColor"></rect> <rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor"></rect> <rect x="3" y="17" width="18" height="2" rx="1" fill="currentColor"></rect>
-      </svg> 
-     </span></button>
-    <div class="collapse navbar-collapse c-nav" id="primaryNav">
-     <ul class="navbar-nav ms-auto mb-2 mb-md-0 c-nav__list" role="list">
-      <li class="nav-item" role="listitem"><a class="nav-link c-nav__link is-active" href="/" aria-current="page">Home</a></li>
-      <li class="nav-item" role="listitem"><a class="nav-link c-nav__link" href="about.html">About</a></li>
-      <li class="nav-item" role="listitem"><a class="nav-link c-nav__link" href="services.html">Collections</a></li>
-      <li class="nav-item" role="listitem"><a class="nav-link c-nav__link" href="careers.html">Careers</a></li>
-      <li class="nav-item" role="listitem"><a class="nav-link c-nav__link" href="contact.html">Contact</a></li>
-     </ul>
-     <a href="contact.html" class="c-button c-button--primary ms-md-3">Shop Now</a>
-    </div>
-   </div>
-  </header>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./careers.html">Careers</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+      </ul>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./careers.html">Careers</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main id="main-content">
    <section class="c-careers-hero l-section" aria-labelledby="careers-hero-heading">
     <div class="c-careers-hero__overlay" aria-hidden="true"></div>
-    <div class="l-container">
+    <div class="container">
      <nav aria-label="breadcrumb">
       <ol class="breadcrumb c-breadcrumb">
        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -52,7 +124,7 @@
     </div>
    </section>
    <section class="l-section c-employer" aria-labelledby="employer-heading">
-    <div class="l-container">
+    <div class="container">
      <div class="row align-items-center gy-5">
       <div class="col-12 col-lg-6" data-aos="fade-right">
        <div class="ratio ratio-16x9 c-employer__image-wrap">
@@ -94,7 +166,7 @@
     </div>
    </section>
    <section class="l-section c-values" aria-labelledby="values-heading">
-    <div class="l-container">
+    <div class="container">
      <div class="text-center mb-5" data-aos="fade-up">
       <h2 id="values-heading" class="c-section-title">Our Core Values</h2>
       <p class="c-section-subtitle">Everything we do is guided by these principles.</p>
@@ -148,7 +220,7 @@
     </div>
    </section>
    <section class="l-section c-jobs" id="open-positions" aria-labelledby="jobs-heading">
-    <div class="l-container">
+    <div class="container">
      <div class="text-center mb-5" data-aos="fade-up">
       <h2 id="jobs-heading" class="c-section-title">Open Positions</h2>
       <p class="c-section-subtitle">Find your place in our growing team.</p>
@@ -306,7 +378,7 @@
     </div>
    </section>
    <section class="l-section c-apply" id="apply" aria-labelledby="apply-heading">
-    <div class="l-container">
+    <div class="container">
      <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
        <div class="c-apply__card" data-aos="fade-up">
@@ -352,78 +424,74 @@
     </div>
    </section>
    <section class="l-section c-contact-cta" aria-labelledby="contact-cta-heading">
-    <div class="l-container">
+    <div class="container">
      <div class="c-contact-cta__inner" data-aos="fade-up">
       <h2 id="contact-cta-heading" class="c-contact-cta__title">Have Questions?</h2>
-      <p class="c-contact-cta__text">Our HR team is happy to help. Reach us at <a href="mailto:info@domain.com" class="c-contact-cta__link">info@domain.com</a> or by phone at <a href="tel:{telephone}" class="c-contact-cta__link">{telephone}</a>.</p>
+      <p class="c-contact-cta__text">Our HR team is happy to help. Reach us at <a href="mailto:requests@domain.com" class="c-contact-cta__link">requests@domain.com</a> or by phone at <a href="tel:+44 131 6494336" class="c-contact-cta__link">+44 131 6494336</a>.</p>
       <a href="contact.html" class="c-button c-button--secondary">Contact HR</a>
      </div>
     </div>
    </section>
   </main>
-  <footer class="l-footer c-footer" role="contentinfo">
-   <div class="container">
-    <div class="row g-4 py-4 py-md-5">
-     <div class="col-12 col-md-4">
-      <a href="/" class="c-logo c-footer__brand" aria-label="Velourá — Home"> <span class="c-logo__wordmark">Velourá</span> </a>
-      <p class="c-footer__tagline mt-2">Luxury lingerie crafted for the modern woman. Elegance. Sensuality. Confidence.</p>
-      <address class="c-footer__address" aria-label="Company address"><span>{address}</span>
-       <br>
-       <a href="tel:{telephone}" class="c-footer__phone">{telephone}</a>
-       <br>
-       <a href="mailto:info@domain.com" class="c-footer__email">info@domain.com</a></address>
-     </div>
-     <div class="col-6 col-md-2">
-      <h3 class="c-footer__heading">Company</h3>
-      <ul class="c-footer__nav" role="list">
-       <li><a href="/" class="c-footer__link">Home</a></li>
-       <li><a href="about.html" class="c-footer__link">About</a></li>
-       <li><a href="services.html" class="c-footer__link">Collections</a></li>
-       <li><a href="careers.html" class="c-footer__link">Careers</a></li>
-       <li><a href="contact.html" class="c-footer__link">Contact</a></li>
-      </ul>
-     </div>
-     <div class="col-6 col-md-2">
-      <h3 class="c-footer__heading">Legal</h3>
-      <ul class="c-footer__nav" role="list">
-       <li><a href="privacy.html" class="c-footer__link">Privacy Policy</a></li>
-       <li><a href="terms_and_conditions.html" class="c-footer__link">Terms &amp; Conditions</a></li>
-       <li><a href="terms_of_services.html" class="c-footer__link">Terms of Service</a></li>
-       <li><a href="cookie_policy.html" class="c-footer__link">Cookie Policy</a></li>
-       <li><a href="gdpr-rights.html" class="c-footer__link">GDPR Rights</a></li>
-       <li><a href="impressum.html" class="c-footer__link">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-12 col-md-4">
-      <h3 class="c-footer__heading">Follow Us</h3>
-      <p class="c-footer__social-text">Stay connected for the latest collections and exclusive previews.</p>
-      <div class="c-footer__social d-flex gap-3 mt-2">
-       <a href="contact.html" class="c-footer__social-link" aria-label="Velourá on Instagram"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-         <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"></rect> <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"></circle> <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle>
-        </svg> 
-       </a> <a href="contact.html" class="c-footer__social-link" aria-label="Velourá on Facebook"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg> 
-       </a> <a href="contact.html" class="c-footer__social-link" aria-label="Velourá on Pinterest"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"></circle> <path d="M9.5 16.5c.5-1.5 1-3 1.5-4.5-.5-.8-.7-1.5-.7-2.5 0-1.5 1-2.5 2-2.5s1.5.8 1.5 2c0 1.5-.8 3.5-.8 5s1 2 2 1.5 2-2.5 2-4c0-3-2-5-5-5-3.5 0-5.5 2.5-5.5 5 0 1.5.5 2.5 1.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-        </svg> 
-       </a>
+  <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand">
+        <div class="dr-footer-logo" aria-label="domain">domain</div>
+        <p class="dr-footer-tagline">Thoughtfully crafted digital experiences.</p>
       </div>
-     </div>
+      <div class="dr-footer-nav-wrap">
+        <nav class="dr-footer-nav" aria-label="Primary navigation">
+          <h2 class="dr-footer-heading">Navigate</h2>
+          <ul class="dr-footer-list">
+            <li class="dr-footer-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+            <li class="dr-footer-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+            <li class="dr-footer-item"><a href="./careers.html" class="dr-footer-link">Careers</a></li>
+            <li class="dr-footer-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+            <li class="dr-footer-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+          </ul>
+        </nav>
+        <nav class="dr-footer-legal" aria-label="Legal navigation">
+          <h2 class="dr-footer-heading">Legal</h2>
+          <ul class="dr-footer-list dr-footer-list-legal">
+            <li class="dr-footer-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+            <li class="dr-footer-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+            <li class="dr-footer-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+            <li class="dr-footer-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+            <li class="dr-footer-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+            <li class="dr-footer-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+          </ul>
+        </nav>
+        <section class="dr-footer-contact" aria-label="Contact information">
+          <h2 class="dr-footer-heading">Contact</h2>
+          <ul class="dr-footer-contact-list">
+            <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Address</span><span class="dr-footer-contact-value">One Canada Square, Canary Wharf, Floor 16, Office 1206, E14 5AB London</span></li>
+            <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Phone</span><a href="tel:+44 131 6494336" class="dr-footer-contact-link">+44 131 6494336</a></li>
+            <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Email</span><a href="mailto:requests@domain.com" class="dr-footer-contact-link">requests@domain.com</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
-    <div class="c-footer__bottom row border-top py-3 align-items-center">
-     <div class="col-12 col-md-6 text-center text-md-start">
-      <p class="c-footer__copy mb-0">© <span id="currentYear"></span> Velourá. All rights reserved.</p>
-     </div>
-     <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
-      <a href="privacy.html" class="c-footer__link me-3">Privacy</a> <a href="cookie_policy.html" class="c-footer__link me-3">Cookies</a> <a href="impressum.html" class="c-footer__link">Impressum</a>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">The information provided on domain.com is for general informational purposes only and does not constitute professional advice. domain makes no warranties about the completeness, reliability, or accuracy of this content.</p>
+      <div class="dr-footer-bottom-bar">
+        <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
+      </div>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>

@@ -206,7 +206,7 @@
     var navLinks = document.querySelectorAll('.navbar-nav .nav-link, .c-nav__link');
     if (!navLinks.length) return;
 
-    var currentPath = location.pathname.replace(//$/, '') || '/';
+    var currentPath = location.pathname.replace(/\/$/, '') || '/';
     var isHome =
       currentPath === '' ||
       currentPath === '/' ||
@@ -229,7 +229,7 @@
       var href = link.getAttribute('href');
       if (!href) return;
 
-      var normalizedHref = href.replace(//$/, '') || '/';
+      var normalizedHref = href.replace(/\/$/, '') || '/';
       var isLinkHome =
         normalizedHref === '' ||
         normalizedHref === '/' ||
@@ -567,9 +567,9 @@
     }
   }
 
-  var RE_EMAIL = /^[^s@]+@[^s@]+.[^s@]+$/;
-  var RE_PHONE = /^[+-ds()[]]{7,20}$/;
-  var RE_URL = /^https?://.+/;
+  var RE_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var RE_PHONE = /^[+\-ds()\[\]]{7,20}$/;
+  var RE_URL = /^https?:\/\/.+/;
 
   function validateName(value) {
     return value.trim().length >= 1;
